@@ -1,0 +1,14 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      API_KEY: ${{ secrets.MP_GIT_SECRET }}
+
+    steps:
+      - run: echo "Hello World"
+  
